@@ -8,10 +8,10 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://validator-labs.github.io/docs',
+  url: 'https://validator-labs.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs', // TODO: Change this if we need to.
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -19,7 +19,7 @@ const config: Config = {
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: 'log',
+  onBrokenLinks: 'log', // Changed to log because we got false positive broken links
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -40,6 +40,8 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          path: 'docs',
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
