@@ -1,6 +1,15 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+// Settings related to what we've set up for GitHub Pages and Netlify.
+const githubOrg = 'validator-labs';
+const githubRepo = 'docs';
+const netlifySiteName = 'validator-labs-docs';
+
+// Whether the site is being deployed to Netlify. This affects parts of the config so that the site
+// is deployed corectly to each.
+const deployingToNetlify = process.env['DEPLOYING_TO_NETLIFY'] === 'TRUE' || false;
 
 const config: Config = {
   title: 'Validator Documentation',
@@ -8,19 +17,24 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://validator-labs.github.io/',
+  url: deployingToNetlify ? `https://${netlifySiteName}.netlify.app` : `https://${githubOrg}.github.io/`,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docs',
+  baseUrl: deployingToNetlify ? `/` : `/${githubRepo}`,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'validator-labs', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: githubOrg, // Usually your GitHub org/user name.
+  projectName: githubRepo, // Usually your repo name.
   trailingSlash: false,
 
+  // If we're deploying to Netlify, we don't want search engines to index us. This lets us use some
+  // other deployment destination for production. In this case, that's GitHub Pages.
+  noIndex: deployingToNetlify,
+
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -81,7 +95,7 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
