@@ -13,7 +13,7 @@ const deployingToNetlify = process.env['DEPLOYING_TO_NETLIFY'] === 'TRUE' || fal
 
 const config: Config = {
   title: 'Validator Documentation',
-  tagline: 'Validate all the things',
+  tagline: 'Validate all the things 🎉',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
