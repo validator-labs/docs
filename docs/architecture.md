@@ -1,6 +1,6 @@
 ---
 title: Architecture
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## Overall architecture
@@ -35,7 +35,7 @@ Each of these validator CRs define one or more rules that can be provided in its
 
 #### Official and community plugins
 
-The architecture enables new types of validation to be provided by any plugin. 
-Right now, the only plugins are official ones (see [Repositores](/repositories)), but it is possible for new plugins to be developed in the community.
+The architecture enables new types of validation to be provided by any plugin.
+Right now, the only plugins are official ones (see [Repositories](/repositories)), but it is possible for new plugins to be developed in the community.
 
-We will describe community plugins in more detail later, but if you want to get started creating a plugin now, feel free to [get in touch](https://github.com/validator-labs/validator/discussions).
+We will describe community plugins in more detail later, but if you want to get started creating a plugin now, feel free to [get in touch](/community).

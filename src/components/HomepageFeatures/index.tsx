@@ -10,26 +10,26 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Day 1, 2 validation',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Day 0-2 validation',
+    Svg: require('@site/static/img/undraw_apps_notification_ovut.svg').default,
     description: (
       <>
-        Define rules and execute them on Day 1 to validate your environment. Allow continuous validation to run on Day 2 onwards to validate your environment over time.
+        Define rules and execute them before deploying to validate your environment. Allow continuous validation to run and alert to ensure your environment remains valid.
       </>
     ),
   },
   {
     title: 'Powered by Kubernetes',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_programmer_re_owql.svg').default,
     description: (
       <>
-        Use Kubernetes CRDs to define rules. Official plugins and community plugins consume the CRDs to perform validation.
+        Use Kubernetes CRs (custom resources) to define rules. Official plugins and community plugins consume the CRs to perform validation.
       </>
     ),
   },
   {
     title: 'validatorctl CLI',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_programming_re_kg9v.svg').default,
     description: (
       <>
         Use validatorctl to set up validator for your environment, define rules, and execute them.
@@ -65,3 +65,11 @@ export default function HomepageFeatures(): JSX.Element {
     </section>
   );
 }
+
+// export default function HomepageReadMore(): JSX.Element {
+//   return (
+//     <section className={styles.features}>
+//       read more
+//     </section>
+//   )
+// }

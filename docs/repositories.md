@@ -1,6 +1,6 @@
 ---
 title: Repositories
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 The Validator project is divided into multiple repositories, including repositories for official plugins.
