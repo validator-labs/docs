@@ -3,18 +3,20 @@ title: Download & Install
 sidebar_position: 1
 ---
 
-## Download
+## MacOS & Linux
 
-Download validatorctl for your OS and architecture from GitHub [Releases](https://github.com/validator-labs/validatorctl/releases).
+Download and install the latest release for your OS and CPU architecture from the GitHub [Releases](https://github.com/validator-labs/validatorctl/releases).
 
-## Install
+You can use this helper script to install the binary to `/usr/local/bin/validatorctl`:
 
-## MacOS/Linux
-
-Move the downloaded binary to somewhere on your PATH.
-
-Example:
-
+```shell
+curl -fsSL https://raw.githubusercontent.com/validator-labs/docs/main/scripts/get-validator.sh
+chmod 700 get_validator.sh
+./get_validator.sh
 ```
-$ sudo mv <binary> /usr/local/bin
-```
+
+## Windows
+
+Download the latest Windows release from the GitHub [Releases](https://github.com/validator-labs/validatorctl/releases/latest).
+
+Proceed through installation wizard.
