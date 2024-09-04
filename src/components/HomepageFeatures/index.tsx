@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Day 0-2 validation',
-    Svg: require('@site/static/img/undraw_apps_notification_ovut.svg').default,
+    Svg: require('@site/static/img/check.svg').default,
     description: (
       <>
         Define rules and execute them before deploying to validate your environment. Allow continuous validation to run and alert to ensure your environment remains valid.
@@ -19,8 +19,8 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Powered by Kubernetes',
-    Svg: require('@site/static/img/undraw_programmer_re_owql.svg').default,
+    title: 'Kubernetes-native',
+    Svg: require('@site/static/img/k8s_logo.svg').default,
     description: (
       <>
         Use Kubernetes CRs (custom resources) to define rules. Official plugins and community plugins consume the CRs to perform validation.
@@ -28,11 +28,11 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'validatorctl CLI',
-    Svg: require('@site/static/img/undraw_programming_re_kg9v.svg').default,
+    title: 'Intuitive CLI',
+    Svg: require('@site/static/img/undraw_programmer.svg').default,
     description: (
       <>
-        Use validatorctl to set up validator for your environment, define rules, and execute them.
+        Use validatorctl to set up Validator for your environment, define rules, and execute them.
       </>
     ),
   },

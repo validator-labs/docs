@@ -90,7 +90,21 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      // TODO: Should we add a copyright statement?
+      links: [
+        {
+          title: 'Links',
+          items: [
+            {
+              label: 'GitHub',
+              href: 'https://github.com/validator-labs'
+            },
+            {
+              label: 'Licencing',
+              href: '/licencing'
+            }
+          ]
+        }
+      ],
       copyright: `Built with Docusaurus.`,
     },
     prism: {
