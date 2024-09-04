@@ -23,6 +23,12 @@ To install, run:
 go install github.com/validator-labs/validatorctl@latest
 ```
 
+:::note
+
+The MacOS build is currently only available for arm64 and the Linux build is currently only available for amd64.
+
+:::
+
 ## Windows
 
 Download the latest Windows release from [GitHub Releases](https://github.com/validator-labs/validatorctl/releases/latest).
@@ -42,3 +48,9 @@ Invoke-WebRequest -Uri $downloadUrl -OutFile validatorctl.exe
 ```
 
 You can then move the binary to anywhere on your PATH.
+
+:::note
+
+The Windows build is only available for amd64.
+
+:::
