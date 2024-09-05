@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Day 0-2 validation',
+    Svg: require('@site/static/img/check.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Define rules and execute them before deploying to validate your environment. Allow continuous validation to run and alert to ensure your environment remains valid.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Kubernetes-native',
+    Svg: require('@site/static/img/k8s_logo.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Use Kubernetes CRs (custom resources) to define rules. Official plugins and community plugins consume the CRs to perform validation.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Intuitive CLI',
+    Svg: require('@site/static/img/undraw_programmer.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Use validatorctl to set up Validator for your environment, define rules, and execute them.
       </>
     ),
   },
@@ -68,3 +65,11 @@ export default function HomepageFeatures(): JSX.Element {
     </section>
   );
 }
+
+// export default function HomepageReadMore(): JSX.Element {
+//   return (
+//     <section className={styles.features}>
+//       read more
+//     </section>
+//   )
+// }
