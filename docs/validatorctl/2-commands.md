@@ -355,6 +355,7 @@ The `check` subcommand accepts the following flags.
 | -------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | `-f`           | `--config-file`      | Validator configuration file.                                                                                                                              | string   |
 | `-o`           | `--config-only`      | Update the configuration file only. Do not proceed with checks. Default: false                                                                             | boolean  |
+|                | `--custom-resources` | Path to a file or directory containing validator custom resource YAML documents.                                                                           | string   |
 | `-h`           | `--help`             | Help with any command.                                                                                                                                     | -        |
 | `-r`           | `--reconfigure`      | Reconfigure plugins rules prior to running checks. The `--config-file` flag must be included. Default: false.                                              | boolean  |
 | `-p`           | `--update-passwords` | Update credentials provided in the configuration file. This does not proceed with installation. The `--config-file` flag must be included. Default: false. | boolean  |
@@ -367,11 +368,18 @@ Directly evaluate Validator plugin rules.
 validator rules check
 ```
 
-Directly evaluate preconfigured Validator plugin rules.
+Directly evaluate preconfigured Validator plugin rules via validator config.
 
 ```shell
 validator rules check  \
 --config-file /Users/demo/.validator/validator-20231109135306/validator.yaml
+```
+
+Directly evaluate preconfigured Validator plugin rules via custom resources.
+
+```shell
+validator rules check  \
+--custom-resources /Users/demo/custom-resources
 ```
 
 ### Uninstall
