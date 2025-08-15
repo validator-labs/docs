@@ -16,7 +16,7 @@ esac
 os=$(uname -s)
 case "$(uname -s)" in
     Darwin) asset_name="validator-darwin-$arch" ;;
-    Linuxn) asset_name="validator-linux-$arch" ;;
+    Linux) asset_name="validator-linux-$arch" ;;
     *)
         echo "Unsupported operating system: $os"
         exit 1
@@ -25,11 +25,14 @@ esac
 
 # Find latest release assets, filter out SBOMs, hashes, and filter to the one
 # for the CPU architecture and OS.
-curl -sLO $(curl -s https://api.github.com/repos/validator-labs/validatorctl/releases/latest \
-  | grep -oP '"browser_download_url": "\K[^"]+' \
-  | grep -v sha256 | grep $asset_name)
-chmod +x $asset_name
+curl -sLO "$(curl -s https://api.github.com/repos/validator-labs/validatorctl/releases/latest \
+  | grep '"browser_download_url"' \
+  | grep -v sha256 \
+  | grep "$asset_name" \
+  | sed 's/.*"browser_download_url": "\([^"]*\)".*/\1/')"
 
 dest="/usr/local/bin/validatorctl"
-sudo mv $asset_name $dest
-echo "Installed validatorctl to $dest."
+
+chmod +x "$asset_name"
+sudo mv "$asset_name" "$dest"
+echo "Installed validatorctl to $dest"
